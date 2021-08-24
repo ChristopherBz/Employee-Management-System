@@ -5,17 +5,15 @@ const connection = require("./config/connection");
 const consoleTable = require('console.table');
 const util = require('util');
 
-
-
 // Begin the application after establishing the connection.
 connection.connect(function (err) {
     if (err) throw err;
     initialAction();
 })
 
-// Give the user a pleasant welcome message.
+// Welcome message.
 console.table(
-    "\n------------ EMPLOYEE TRACKER ------------\n"
+    "\n------------ EMPLOYEE MANAGEMENT SYSTEM ------------\n"
 )
 
 // Ask the user initial action question to figure out what they would like to do.
