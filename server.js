@@ -7,9 +7,9 @@ const util = require('util');
 // Create the connection to MySQL WorkBench
 let connection = mysql.createConnection({
     host: 'localhost',
-    port: 3001,
+    port: 3306,
     user: 'root',
-    password: '',
+    password: 'ArstArstArst1!',
     database: 'employee_DB'
 });
 
