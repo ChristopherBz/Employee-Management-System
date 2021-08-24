@@ -22,7 +22,7 @@ const initialAction = async () => {
         let answer = await inquirer.prompt({
             name: 'action',
             type: 'list',
-            message: 'Options?',
+            message: 'Options:',
             choices: [
                 'View Departments',
                 'View Roles',
@@ -73,25 +73,7 @@ const initialAction = async () => {
     };
 }
 
-// Selection to view all of the employees.
-const employeeView = async () => {
-    console.log('Employee View');
-    try {
-        let query = 'SELECT * FROM employee';
-        connection.query(query, function (err, res) {
-            if (err) throw err;
-            let employeeArray = [];
-            res.forEach(employee => employeeArray.push(employee));
-            console.table(employeeArray);
-            initialAction();
-        });
-    } catch (err) {
-        console.log(err);
-        initialAction();
-    };
-}
-
-// Selection to view all of the departments.
+// View all of the departments option
 const departmentView = async () => {
     console.log('Department View');
     try {
@@ -109,7 +91,7 @@ const departmentView = async () => {
     };
 }
 
-// Selection to view all of the roles.
+// View all of the roles option
 const roleView = async () => {
     console.log('Role View');
     try {
@@ -127,7 +109,26 @@ const roleView = async () => {
     };
 }
 
-// Selection to add a new employee.
+// View all of the employees option
+const employeeView = async () => {
+    console.log('Employee View');
+    try {
+        let query = 'SELECT * FROM employee';
+        connection.query(query, function (err, res) {
+            if (err) throw err;
+            let employeeArray = [];
+            res.forEach(employee => employeeArray.push(employee));
+            console.table(employeeArray);
+            initialAction();
+        });
+    } catch (err) {
+        console.log(err);
+        initialAction();
+    };
+}
+
+
+// Add a new employee option
 const employeeAdd = async () => {
     try {
         console.log('Employee Add');
@@ -187,7 +188,7 @@ const employeeAdd = async () => {
     };
 }
 
-// Selection to add a new department.
+// Add a new department
 const departmentAdd = async () => {
     try {
         console.log('Department Add');
@@ -213,7 +214,7 @@ const departmentAdd = async () => {
     };
 }
 
-// Selection to add a new role.
+// Add a new role
 const roleAdd = async () => {
     try {
         console.log('Role Add');
@@ -265,7 +266,7 @@ const roleAdd = async () => {
     };
 }
 
-// Selection to update a roll for a specific employee.
+// Update the role of an employee.
 const employeeUpdate = async () => {
     try {
         console.log('Employee Update');
