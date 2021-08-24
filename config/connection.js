@@ -1,6 +1,5 @@
 const mysql = require('mysql2');
 require('dotenv').config();
-const chalk = require('chalk');
 
 var connection = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -11,7 +10,7 @@ var connection = mysql.createConnection({
 });
 connection.connect(function (err) {
     if (err) throw err;
-    console.log(chalk.bgGreen('Connection Successful!'));
+    console.log('Connected.');
 });
 
 module.exports = connection;

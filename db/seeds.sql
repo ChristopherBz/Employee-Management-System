@@ -1,38 +1,55 @@
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Jack', 'Riely', 1, null);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Frank', 'Milton', 2, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Steve', 'Brown', 2, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Josh', 'Beets', 4, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Kevin', 'Bacon', 3, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Dobes', 'Flin', 5, 2);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Matt', 'College', 6, null);
-
-INSERT INTO department (department_name)
-VALUES ('Management');
-INSERT INTO department (department_name)
-VALUES ('Sales');
-INSERT INTO department (department_name)
-VALUES ('Accounting');
-INSERT INTO department (department_name)
-VALUES ('Reception');
-INSERT INTO department (department_name)
-VALUES ('Human Resources');
-
-INSERT INTO role (title, salary, department_id)
-VALUES ('General Manager', 120000, 1);
-INSERT INTO role (title, salary, department_id)
-VALUES ('Salesman', 80000, 2);
-INSERT INTO role (title, salary, department_id)
-VALUES ('Accountant', 90000, 4);
-INSERT INTO role (title, salary, department_id)
-VALUES ('Receptionist', 40000, 3);
-INSERT INTO role (title, salary, department_id)
-VALUES ('Human Resource Officer', 75000, 5);
-INSERT INTO role (title, salary, department_id)
-VALUES ('CEO', 250000, null);
+INSERT into
+  department (department_name)
+VALUES
+  ('Management'),
+  ('Sales'),
+  ('Finance'),
+  ('Legal'),
+  ('Marketing'),
+  ('IT'),
+  ('HR');
+  
+  
+INSERT into
+  role (title, salary, department_id)
+VALUES 
+('CEO', 500000, 1),
+('COO', 450000, 1),
+('CFO', 400000, 1),
+('Head of HR', 300000, 7),
+('Head of Sales', 300000, 1),
+('Marketing Manager', 300000, 5),
+('General Counsel', 300000, 4),
+('Executive Assistant', 250000, 1),
+('Sales Director', 100000, 2),
+('Sales Manager', 100000, 2),
+('Salesperson', 60000, 2),
+('Sales Assistant', 50000, 3),
+("Frontend Developer", 95000, 6),
+("Backend Developer", 95000, 6),
+("Project Manager", 99000, 6),
+("Computer Engineer", 110000, 6),
+("Account Executive", 90000, 5),
+('HR Rep', 35000, 7);
+  
+  
+INSERT into
+  employee (first_name, last_name, role_id, manager_id)
+VALUES
+  ("Steve", "Brown", 1, 1),
+  ("Matt", "Black", 2, 1),
+  ("Dean", "Evans", 3, 1),
+  ("Ace", "Green", 4, 1),
+  ("Alan", "Wagner", 5, 1),
+  ("Tango", "Let", 5, 1),
+  ("Michael", "Kane", 6, 1),
+  ("Sarah", "King", 6, 1),
+  ("Tobby", "Lumbergh", 7, 1),
+  ("Vlad", "Smykowski", 8, 2),
+  ("Nina", "Ramon", 9, 2),
+  ("Brian", "Duffey", 10, 2),
+  ("Adam", "Quiter", 10, 2),
+  ("Elliot", "Fans", 11, 2),
+  ("Stacey", "Yousen", 12, 2),
+  ("Peter", "Mask", 13, 2),
+  ("Leo", "Put", 14, 3);
