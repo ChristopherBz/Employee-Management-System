@@ -5,7 +5,7 @@ const connection = require("./config/connection");
 const consoleTable = require('console.table');
 const util = require('util');
 
-// Begin the application after establishing the connection.
+// Begin application
 connection.connect(function (err) {
     if (err) throw err;
     initialAction();
@@ -16,20 +16,20 @@ console.table(
     "\n------------ EMPLOYEE MANAGEMENT SYSTEM ------------\n"
 )
 
-// Ask the user initial action question to figure out what they would like to do.
+// System choices.
 const initialAction = async () => {
     try {
         let answer = await inquirer.prompt({
             name: 'action',
             type: 'list',
-            message: 'What would you like to do?',
+            message: 'Options?',
             choices: [
-                'View Employees',
                 'View Departments',
                 'View Roles',
-                'Add Employees',
+                'View Employees',
                 'Add Departments',
                 'Add Roles',
+                'Add Employees',
                 'Update Employee Role',
                 'Exit'
             ]
