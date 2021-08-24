@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "console.table": "^0.10.0",
-    "inquirer": "^7.3.3",
-    "mysql": "^2.18.1",
-    "util": "^0.12.3",
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.3.0",
+    "util": "^0.12.4",
     "dotenv": "^10.0.0"
   }
 }

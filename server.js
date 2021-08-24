@@ -1,20 +1,11 @@
 // List the dependencies here.
-const mysql = require('mysql');
+const mysql = require("mysql2");
 const inquirer = require('inquirer');
 const connection = require("./config/connection");
 const consoleTable = require('console.table');
 const util = require('util');
 
-// Create the connection to MySQL WorkBench
-let connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: 'ArstArstArst1!',
-    database: 'employee_DB'
-});
 
-connection.query = util.promisify(connection.query);
 
 // Begin the application after establishing the connection.
 connection.connect(function (err) {
