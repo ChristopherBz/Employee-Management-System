@@ -20,7 +20,7 @@ A non-developer friendly command-line application to manage a company's employee
 View the how to video here: https://drive.google.com/file/d/1jlWMwJRep34QJVZ_fWEDNSdAUT4c1PSN/view
 
 ### User-Story
-As A business owner
+As a business owner
 I want to be able to view and manage the departments, roles, and employees in my company
 so that I can organize and plan my business
 
@@ -32,8 +32,8 @@ To clone the repo:
 git clone git@github.com:ChristopherBz/Employee-Management-System.git
 ``` 
 Run 'npm install' to install dependencies  
-Create a .env file and add your SQL login details  
-Run 'node server.js' to the application
+Create a .env file and add your MySQL login details  
+Enter 'node server.js' in the terminal to run the application
 
 ## Technology
 
